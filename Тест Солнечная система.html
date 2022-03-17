@@ -1,0 +1,59 @@
+<html>
+<head><title>Тест из нескольких задач по математике</title>
+<style>
+p {
+font-size:24px;
+color: #C71585;
+}
+input {
+font-size:24px;
+}
+</style>
+</head>
+<body style="background: #000 url(галактика.JPEG);">
+<p>Выполните задания теста:</p>
+<p>Сколько планет в солнечной системе?<input type="text" id="z_1"></p>
+<p>Какое количество астероидных поясов насчитывается в солнечной системе?<input type="text" id="z_2"></p>
+<p>Как называется галактика, в которой находится солнечная система?<input type="text" id="z_3"></p>
+<button onclick="proverit();">Проверить</button>
+<div id="rezultat"></div>
+<script>
+function proverit(){
+pr_otv_zadachi_1 = 8;
+pr_otv_zadachi_2 = 2;
+pr_otv_zadachi_3 = Млечный путь;
+otv_uch_1 = document.getElementById('z_1').value;
+otv_uch_2 = document.getElementById('z_2').value;
+otv_uch_3 = document.getElementById('z_3').value;
+ball = 0;
+if(otv_uch_1 == pr_otv_zadachi_1){
+ball +=1;
+}
+if(otv_uch_2 == pr_otv_zadachi_2){
+ball +=1;
+}
+if(otv_uch_3 == pr_otv_zadachi_3){
+ball +=1;
+}
+vsego_zadach = 3;
+procent_vip = ball/vsego_zadach * 100;
+document.getElementById('rezultat').innerHTML = "Задания выполнены верно на "+procent_vip+"%.";
+}
+</script>
+Вспомним с какими художниками связанны эти даты
+<table border="1">
+<tr>
+<td bgcolor= "#C71585">Сколько планет в солнечной системе?</td>
+<td bgcolor= "#C71585">8</td>
+</tr>
+<tr>
+<td bgcolor= "#C71585">Какое количество астероидных поясов насчитывается в солнечной системе?</td>
+<td bgcolor= "#C71585">2</td>
+<tr>
+<td bgcolor= "#C71585">Какое количество астероидных поясов насчитывается в солнечной системе?</td>
+<td bgcolor= "#C71585">Млечный путь</td>
+</tr>
+</tr>
+</table>
+</body>
+</html>
